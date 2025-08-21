@@ -20,9 +20,14 @@ export default function AboutPage() {
 
 export default function AboutPage() {
   return (
-    <div>
-      <h1>About Page</h1>
-      <p>This is a static route.</p>
+    <div className="p-8">
+      <h1 className="text-3xl font-bold mb-4">About Page</h1>
+      <p className="text-lg">
+        This is a static route example. The file is located at:
+        <code className="bg-gray-100 px-2 py-1 rounded ml-2">
+          src/app/about/page.tsx
+        </code>
+      </p>
     </div>
   );
 }`}

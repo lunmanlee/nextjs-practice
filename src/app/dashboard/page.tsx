@@ -30,18 +30,32 @@ src/app/dashboard/page.tsx → /dashboard
 src/app/dashboard/analytics/page.tsx → /dashboard/analytics
 
 // layout.tsx
-export default function DashboardLayout({ children }) {
+import Link from 'next/link';
+
+export default function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <div className="flex">
-      <nav>Dashboard Navigation</nav>
-      <main>{children}</main> {/* page.tsx renders here */}
+    <div className="min-h-screen bg-gray-50">
+      <div className="flex">
+        <div className="w-64 bg-white shadow-md">
+          <div className="p-4">
+            <h2 className="text-xl font-bold text-gray-800">Dashboard</h2>
+          </div>
+          <nav className="mt-4">
+            <Link href="/dashboard">Overview</Link>
+            <Link href="/dashboard/analytics">Analytics</Link>
+            <Link href="/dashboard/settings">Settings</Link>
+          </nav>
+        </div>
+        <div className="flex-1 p-8">
+          {children} {/* page.tsx renders here */}
+        </div>
+      </div>
     </div>
   );
-}
-
-// page.tsx
-export default function DashboardPage() {
-  return <div>Dashboard content</div>;
 }`}
           </pre>
         </div>

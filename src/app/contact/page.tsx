@@ -45,12 +45,31 @@ export default function ContactPage() {
 
 export default function ContactPage() {
   return (
-    <div>
-      <h1>Contact Page</h1>
-      <form>
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email" />
-        <button type="submit">Submit</button>
+    <div className="p-8">
+      <h1 className="text-3xl font-bold mb-4">Contact Page</h1>
+      <form className="space-y-4 max-w-md">
+        <div>
+          <label className="block text-sm font-medium mb-1">Name</label>
+          <input 
+            type="text" 
+            className="w-full border border-gray-300 rounded px-3 py-2"
+            placeholder="Your name"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium mb-1">Email</label>
+          <input 
+            type="email" 
+            className="w-full border border-gray-300 rounded px-3 py-2"
+            placeholder="your@email.com"
+          />
+        </div>
+        <button 
+          type="submit"
+          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        >
+          Submit
+        </button>
       </form>
     </div>
   );
