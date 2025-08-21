@@ -19,6 +19,10 @@ export default function Home() {
               <Link href="/contact" className="block text-blue-600 hover:text-blue-800">
                 → /contact
               </Link>
+              <Link href="/services" className="text-blue-600 hover:text-blue-800">
+                → /services
+              </Link>
+
             </div>
             <p className="text-sm text-gray-600 mt-3">
               Basic routing with page.tsx files
